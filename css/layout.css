@@ -1,0 +1,37 @@
+* {
+margin : 0;
+padding : 0;
+}
+* body {
+background-color: #444;
+font-family: 'Flamenco', cursive;
+}
+div{
+display: block;
+}
+#station-list{
+position: absolute;
+top: 30px;
+left: 40px;
+width: 30%;
+}
+.station{
+background-color: #CC3333;
+margin: 10px auto;
+padding: 5px 10px;
+height : 60px;
+width: 90%;
+border-radius:10px;
+}
+.latitude,.longitude{
+display: none;
+}
+#map-container{
+position:fixed;
+top: 30px;
+right: 40px;
+}
+#map_canvas {
+width: 500px;
+height: 400px;
+}
