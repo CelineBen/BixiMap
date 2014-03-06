@@ -37,7 +37,6 @@ $(document).ready(function(){
 			var html = "";
 			for(var i=0; i < this.stations.length; i++){
 				station = this.stations[i];
-				//html += '<div class="station" data-lat="'+station.lat+'" data-long="'+station.long+'" data-name="'+station.name+'"><span class="station-name">'+station.name+'</span><span class="bikes-number">'+station.nbBikes+'</span><span class="empty-docks">'+station.nbEmptyDocks+'</span><span class="docks-number">'+station.nbDocks+'</span></div>';
 				html += '<tr class="station" data-lat="'+station.lat+'" data-long="'+station.long+'" data-name="'+station.name+'"><td class="station-name">'+station.name+'</td><td class="bikes-number">'+station.nbBikes+'</td><td class="empty-docks">'+station.nbEmptyDocks+'</td><td class="docks-number">'+station.nbDocks+'</td></tr>';
 
 			}
