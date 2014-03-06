@@ -7,7 +7,7 @@ $(document).ready(function(){
 			google.maps.event.addDomListener(window, 'load', this.initializeMap());				
 			this.prepareStationList();
 			
-			$('#station-list').on('click', '.station',function(){
+			$('#station-table').on('click', '.station',function(){
 				var station = $(this);
 				var location = new google.maps.LatLng(station.attr('data-lat'),station.attr('data-long'));
 				var zoom = 15;
@@ -37,9 +37,11 @@ $(document).ready(function(){
 			var html = "";
 			for(var i=0; i < this.stations.length; i++){
 				station = this.stations[i];
-				html += '<div class="station" data-lat="'+station.lat+'" data-long="'+station.long+'" data-name="'+station.name+'"><span class="station-name">'+station.name+'</span><span class="bikes-number">'+station.nbBikes+'</span><span class="empty-docks">'+station.nbEmptyDocks+'</span><span class="docks-number">'+station.nbDocks+'</span></div>';
+				//html += '<div class="station" data-lat="'+station.lat+'" data-long="'+station.long+'" data-name="'+station.name+'"><span class="station-name">'+station.name+'</span><span class="bikes-number">'+station.nbBikes+'</span><span class="empty-docks">'+station.nbEmptyDocks+'</span><span class="docks-number">'+station.nbDocks+'</span></div>';
+				html += '<tr class="station" data-lat="'+station.lat+'" data-long="'+station.long+'" data-name="'+station.name+'"><td class="station-name">'+station.name+'</td><td class="bikes-number">'+station.nbBikes+'</td><td class="empty-docks">'+station.nbEmptyDocks+'</td><td class="docks-number">'+station.nbDocks+'</td></tr>';
+
 			}
-			$('#station-list').append(html);
+			$('#station-table').append(html);
 		},
 		prepareMarkers: function(){
 			for(var i=0; i < this.stations.length; i++){
@@ -50,8 +52,7 @@ $(document).ready(function(){
 		}
 	};
 	
-	bixi.initialize();
-		
+	bixi.initialize()		
 });
 
 
