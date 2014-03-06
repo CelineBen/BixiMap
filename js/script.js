@@ -19,15 +19,15 @@ $(document).ready(function(){
 		initializeMap: function(){
 			var map_canvas = document.getElementById('map_canvas');
    			var map_options = {
-      			center: new google.maps.LatLng(51.52916347, -0.109970527),
-      			zoom: 14,
-      			mapTypeId: google.maps.MapTypeId.ROADMAP,
-      		};
-      		this.map = new google.maps.Map(map_canvas, map_options);
-      		this.prepareMarkers();
-    	},    	
-    	addMarker: function(location, title){
-    		var marker = new google.maps.Marker({
+      				center: new google.maps.LatLng(51.52916347, -0.109970527),
+      				zoom: 14,
+      				mapTypeId: google.maps.MapTypeId.ROADMAP,
+      			};
+      			this.map = new google.maps.Map(map_canvas, map_options);
+      			this.prepareMarkers();
+    		},    	
+    		addMarker: function(location, title){
+    			var marker = new google.maps.Marker({
 				position: location,
 				map: this.map,
 				title: title
